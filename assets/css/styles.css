@@ -1,0 +1,16 @@
+footer {
+    background-color: #25171a;
+    border-top: 5px solid #484ab6;
+    color:#98c1d9;
+    padding-top: 20px;
+    position: fixed;        
+    height: 75px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.question-card {
+    width: 100%;
+    margin-right: 11px;
+}
