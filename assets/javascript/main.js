@@ -1,5 +1,5 @@
 // array of topics that will be called 
-let topics = ["dogs", "cat", "eagle", "hippopotamus", "elephant"];
+let topics = ["dogs", "cat", "eagle", "cheetah", "elephant"];
 
 for (let i = 0; i < topics.length; i++) {
 
@@ -11,6 +11,10 @@ for (let i = 0; i < topics.length; i++) {
 
         $('#buttons').prepend(btn);
 }
+
+//To Do: Implement static images for initial setup -> activate gif on click logic
+//To Do: Ratings <p> tag, and logic to only show appropriate gifs
+//TO Do: Search capabilities for user with limit returns and logic to add serach topic to topics array
 
 $('button').on('click', function() {
 
