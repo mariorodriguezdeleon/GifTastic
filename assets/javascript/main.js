@@ -68,3 +68,8 @@ $("body").on("click", ".gif", function() {
                 $(this).attr("data-state", "still");
                 } 
 });
+
+//TO DO: Add Submit Functionality.  When a user enters a search topic do ->
+// 1. Perform quick input validation
+// 2. Append search topic to 'topics' list and perform query - it might be necessary to pull the .ajax function out 
+//    as a stand alone function to be called by the various other events in the script.
