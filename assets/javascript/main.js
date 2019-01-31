@@ -82,19 +82,15 @@ $("body").on("click", ".gif", function() {
 });
 
 //TO DO: Add Submit Functionality.  When a user enters a search topic do ->
-// 1. Perform quick input validation
-// 2. Append search topic to 'topics' list and perform query - it might be necessary to pull the .ajax function out 
+// TO DO 1. Perform quick input validation
+// DONE: 2. Append search topic to 'topics' list and perform query - it might be necessary to pull the .ajax function out 
 //    as a stand alone function to be called by the various other events in the script.
 
 $(".search-button").on("click", function() {
 
-        console.log("in the function");
-
         let newTopic = document.getElementById("search-topic").value;
 
         topics.push(newTopic);
-
-        console.log(topics);
 
         generateButton(newTopic);
 
