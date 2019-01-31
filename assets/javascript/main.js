@@ -1,6 +1,18 @@
 // array of topics that will be called 
 let topics = ["dogs", "cat", "eagle", "cheetah", "elephant", "koala"];
 
+function generateButton(newTopic){
+
+        let newBtn = $("<button>");
+
+        newBtn.attr('topic-data', newTopic);
+        newBtn.attr('value', newTopic);
+        newBtn.html(newTopic);
+
+        $('#buttons').append(newBtn);
+        
+}
+
 for (let i = 0; i < topics.length; i++) {
 
         let btn = $("<button>");
@@ -9,13 +21,13 @@ for (let i = 0; i < topics.length; i++) {
         btn.attr('value', topics[i]);
         btn.html(topics[i]);
 
-        $('#buttons').prepend(btn);
+        $('#buttons').append(btn);
 }
 
 //To DO: Implement static images for initial setup -> activate gif on click logic
 //To DO: Ratings <p> tag, and logic to only show appropriate gifs
 //TO DO: Search capabilities for user with limit returns and logic to add serach topic to topics array
-$("button").on("click", function() {
+$("body").on("click","button", function() {
 
         $('#gif-images').empty();
 
@@ -73,3 +85,17 @@ $("body").on("click", ".gif", function() {
 // 1. Perform quick input validation
 // 2. Append search topic to 'topics' list and perform query - it might be necessary to pull the .ajax function out 
 //    as a stand alone function to be called by the various other events in the script.
+
+$(".search-button").on("click", function() {
+
+        console.log("in the function");
+
+        let newTopic = document.getElementById("search-topic").value;
+
+        topics.push(newTopic);
+
+        console.log(topics);
+
+        generateButton(newTopic);
+
+});
